@@ -56,7 +56,7 @@
 ```
 1. gh auth login
 2. git remote set-url origin https://github.com/myRepositoryLink2
-3. git add
+3. git add .
 4. git commit -m "added files"
 5. git push --set-upstream origin main
 ```
@@ -64,10 +64,18 @@
 ### PUSH TO GITHUB REGULARLY
 
 ```
-- git add
+- git add .
 - git commit -m "the changes I made"
 - git push
 ```
+
+### RENAME DEFAULT BRANCH TO MAIN
+
+- `git branch -M main`
+
+### SET GLOBAL DEFAULT BRANCH TO MAIN
+
+- `git config --global init.defaultBranch main`
 
 ### COMMAND DESCRIPTIONS
 
@@ -83,3 +91,14 @@
    - Pushes files to GitHub and makes origin and main the
 6. default options
    - press enter 4 times or until complete
+
+### DELETE SOURCE CONTROL
+
+```
+ls -a
+rm -r .git
+```
+
+### VIEW BRANCHES
+
+`git branch`
