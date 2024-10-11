@@ -102,9 +102,28 @@
 
 ```
 ls -a
-rm -r .git
+rm -rf .git
 ```
+- `-r` means recursive, 
+- `-rf` means recursive and force
 
 ### VIEW BRANCHES
 
 `git branch`
+- Will list all branches (*) signals which branch you are currently using
+
+### CREATE A BRANCH
+
+`git branch name_New_Branch`
+
+### SWITCH TO A BRANCH
+
+`git switch branch_Name_Here`
+
+### MERGE BRANCHES
+
+`git merge myBranch`
+
+- Merge the branches:
+1. Switch to the target branch (main).
+2. Merge the other branch (myBranch).
