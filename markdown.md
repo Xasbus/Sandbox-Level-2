@@ -33,7 +33,7 @@ Use 3 backticks above and below
 
 ### HYPERLINKS
 
-[CodeX Academy](https//:codexacademy.com)
+[CodeX Academy](https://codexacademy.moodlecloud.com/)
 
 ### USING HTML
 

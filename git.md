@@ -16,13 +16,19 @@
 
 ### CONFIGURE USER NAME
 
-1. Run the command `git config user.name`
-2. If it's not correct, run the command git config user. name "myUserName"
+1. `git init`
+2. Run the command `git config user.name`
+3. If it's not correct, run the command `git config user.name "Xasbus"`
+4. Set as default user name, run command:
+   - `git config --global user.name "Xasbus"`
 
 ### CONFIGURE USER EMAIL
 
-1. Run the command `git config user.email`
-2. If it's not correct, run the command git config user.email "my@email.com"
+1. `git init`
+2. Run the command `git config user.email`
+3. If it's not correct,  run the command `git config user.email "my@email.com"`
+4. Set as default user email, run command: 
+  - `git config --global user.email "davidbilliot0828@gmail.com"`
 
 ### COPY THE REPOSITORY LINK
 
