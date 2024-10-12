@@ -28,7 +28,7 @@
 2. Run the command `git config user.email`
 3. If it's not correct,  run the command `git config user.email "my@email.com"`
 4. Set as default user email, run command: 
-  - `git config --global user.email "davidbilliot0828@gmail.com"`
+   - `git config --global user.email "davidbilliot0828@gmail.com"`
 
 ### COPY THE REPOSITORY LINK
 
@@ -127,3 +127,55 @@ rm -rf .git
 - Merge the branches:
 1. Switch to the target branch (main).
 2. Merge the other branch (myBranch).
+
+---
+### MERGE TEST
+
+1. `git init`
+2. `touch index.html`
+3. `git commit -m "added files"`
+4. Create a github repository called merge-test.
+5. `git remote add origin "https://github.com/Xasbus/merge-test.git"`
+6. `git push --set-upstream origin main`
+7. `git branch`
+8. `git branch myBranch`
+9. `git switch myBranch`
+10. Add <p> Hello World!</p> to index.html
+11. Save the changes CTRL + S
+12. `git add .`
+13. `git commit -m "updated file"`
+14. `git switch main`
+15. Change the history from `auto` to `all`.
+16. `git merge myBranch`
+17. `git push`
+18. `git switch myBranch`
+19. Add <p> Amazing World!</p> to index.html.
+20. Save the changes CTRL + S
+21. `git add .`
+22. `git commit -m "updated file"`
+23. `git switch main`
+24. Add the file about.html with `touch about.html`
+25. `git add .`
+26. `git commit -m "added a file"`
+27. `git merge myBranch`
+28. Approve the editor and type `:qa` and `ENTER`
+29. `git rebase myBranch`
+30. `git push`
+31. `git switch myBrance`
+32. `git rebase main`
+33. Add <h1>About Page</h1> to about.html
+34. Save the changes CTRL + S
+35. `git add .`
+36. `git commit -m "added heading"`
+37. `Git switch main`
+38. Add <h2>About Page</h2 > to about.html
+39. Save the changes CTRL + S
+40. `git add .`
+41. `git commit -m "added heading conflict"`
+42. `git merge myBranch`
+43. SHOWS CONFLICT
+44. Select a resolution.
+45. Save the changes CTRL + S
+46. `git add .`
+47. `git commit -m "merged changes"`
+48. `git push`
