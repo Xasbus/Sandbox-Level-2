@@ -1,0 +1,20 @@
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+    <img width="25%" usemap="#my-image-map" src="2d-shapes.jpg">
+    <map name="my-image-map">
+    <area title="Click the Rectangle" coords="195,70, 365,170" shape="rect" href="#https://en.wikipedia.org/wiki/Rectangle">
+    <area title="Click the Circle" coords="606,118, 55" shape="circle" href="#circles">
+    <area title="Click the Heart" coords="608,520, 633,509, 660,536, 609,600, 557,536, 579,509" shape="poly" href="#https://en.wikipedia.org/wiki/Heart">
+</map>
+    <h2 id="circles">All about circles</h2>
+    <script>
+        imageMapResize();
+    </script>
+</body>
+
+</html>

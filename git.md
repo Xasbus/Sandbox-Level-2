@@ -128,6 +128,10 @@ rm -rf .git
 1. Switch to the target branch (main).
 2. Merge the other branch (myBranch).
 
+### USE VS CODE EDITOR INSTEAD OF VIM
+
+- `git config --global core.editor "code --wait"`
+
 ---
 ### MERGE TEST
 
@@ -159,23 +163,62 @@ rm -rf .git
 26. `git commit -m "added a file"`
 27. `git merge myBranch`
 28. Approve the editor and type `:qa` and `ENTER`
-29. `git rebase myBranch`
-30. `git push`
-31. `git switch myBrance`
-32. `git rebase main`
-33. Add <h1>About Page</h1> to about.html
-34. Save the changes CTRL + S
-35. `git add .`
-36. `git commit -m "added heading"`
-37. `Git switch main`
-38. Add <h2>About Page</h2 > to about.html
-39. Save the changes CTRL + S
-40. `git add .`
-41. `git commit -m "added heading conflict"`
-42. `git merge myBranch`
-43. SHOWS CONFLICT
-44. Select a resolution.
-45. Save the changes CTRL + S
-46. `git add .`
-47. `git commit -m "merged changes"`
-48. `git push`
+29. `git config --global core.editor "code --wait"` to make VS CODE default editor.
+30. `git rebase myBranch`
+31. `git push`
+32. `git switch myBrance`
+33. `git rebase main`
+34. Add <h1>About Page</h1> to about.html
+35. Save the changes CTRL + S
+36. `git add .`
+37. `git commit -m "added heading"`
+38. `Git switch main`
+39. Add <h2>About Page</h2> to about.html
+40. Save the changes CTRL + S
+41. `git add .`
+42. `git commit -m "added heading conflict"`
+43. `git merge myBranch`
+44. SHOWS CONFLICT
+45. Select a resolution.
+46. Save the changes CTRL + S
+47. `git add .`
+48. `git commit -m "merged changes"`
+49. `git push`
+
+### FIX A REBASE CONFLICT
+
+50. `git rebase myBranch`
+51. Select a resolution.
+52. Save the changes CTRL + S
+53. `git add .`
+54. `git rebase --continue`
+55. `git push` 
+    - will result in an error, github sees the branch still
+56. `git push --force` 
+    - will force github to accept changes.
+
+### These next steps are how to restore a save point
+
+57. Select a commit to restore.
+58. Copy its id
+59. `git reset --hard id123456789`
+60. `git push`
+    - will result in an error
+61. `git push --force`
+    
+### HOW TO PUSH BRANCH TO GITHUB
+
+62. `git push origin myBranch`
+    
+### HOW TO DELETE A BRANCH
+
+1.  `git branch`
+2.  `git branch --delete myBranch` 
+      - will result in error
+3. `git branch --D myBranch` 
+   - force delete
+
+### HOW TO GET BRANCH BACK
+
+1. `git branch myBranch origin/myBranch`
+2. `git branch`
