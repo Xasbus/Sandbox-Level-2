@@ -1,0 +1,93 @@
+<head>
+
+    <h1>Form Inputs</h1>
+</head>
+
+<body>
+    <hr>
+    <h2>Inputs</h2>
+
+    <h3>Buttons</h3>
+    <pre>
+        <button type="button">Click Here</button>
+        <input type="button" value="Click Button">
+        <input type="submit" value="Add Submission">
+        <input type="reset" value="Reset Form">
+        <input type="image" src="submit-button-image.png">
+        <input type="radio">Radio Button
+        <input type="checkbox">Checkbox
+    </pre>
+
+    <h3>Text Inputs</h3>
+    <pre>
+        <input type="text" placeholder="Text Input">
+
+        <input type="email" placeholder="Email Input">
+
+        <input type="tel" placeholder="Phone Number">
+
+        <input type="number" placeholder="Number Input">
+
+        <input type="password" placeholder="Enter Password">
+
+        <input type="search" placeholder="Search Here">
+
+        <input type="url" placeholder="URL Input">
+    </pre>
+
+    <h3>Interfaces</h3>
+    <pre>
+        <input type="file">
+
+        <input type="color"> Color Picker
+
+        <input type="time">
+
+        <input type="week">
+
+        <input type="month"> Month Picker
+
+        <input type="date">
+
+        <input type="datetime-local">
+
+        <input type="number" min="10" max="50"> Pick Number Range
+
+        <input type="range" min="10" max="50"> Number Slider
+
+            <select>
+                <option selected>Drop Down</option>
+                <option>Item 1</option>
+                <option>Item 2</option>
+                <option>Item 3</option>
+            </select>
+    </pre>
+    <hr>
+
+    <h2>Forms</h2>
+    <h3>Validation</h3>
+    <pre>
+        Forms can validate inputs
+        Inputs are checked before being submitted
+        Checks invalid values to see form validation
+    </pre>
+    <form>
+        <input type="email" placeholder="Enter Email">
+        <input type="submit">
+    </form>
+    <form>
+        <input required type="password" placeholder="Enter Your Password">
+        <button type="submit">Submit</button>
+    </form>
+    <form>
+        <input type="text" placeholder="Input Length" minlength="5" maxlength="10">
+        <input type="submit">
+    </form>
+    <form>
+        <input type="tel" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <input type="submit">
+    </form>
+
+
+
+</body>
