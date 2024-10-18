@@ -135,23 +135,37 @@ rm -rf .git
 ---
 ### MERGE TEST
 
+INITIALIZE SOURCE CONTROL
+
 1. `git init`
 2. `touch index.html`
 3. `git commit -m "added files"`
+
+PUSH TO GITHUB
+
 4. Create a github repository called merge-test.
 5. `git remote add origin "https://github.com/Xasbus/merge-test.git"`
 6. `git push --set-upstream origin main`
+
+CREATE A BRANCH
+
 7. `git branch`
 8. `git branch myBranch`
-9. `git switch myBranch`
+9.  `git switch myBranch`
 10. Add <p> Hello World!</p> to index.html
 11. Save the changes CTRL + S
 12. `git add .`
 13. `git commit -m "updated file"`
+
+MERGE THE BRANCH
+
 14. `git switch main`
 15. Change the history from `auto` to `all`.
 16. `git merge myBranch`
 17. `git push`
+
+SET UP FOR REBASE
+
 18. `git switch myBranch`
 19. Add <p> Amazing World!</p> to index.html.
 20. Save the changes CTRL + S
@@ -164,10 +178,16 @@ rm -rf .git
 27. `git merge myBranch`
 28. Approve the editor and type `:qa` and `ENTER`
 29. `git config --global core.editor "code --wait"` to make VS CODE default editor.
+
+REBASE THE COMMITS
+
 30. `git rebase myBranch`
 31. `git push`
 32. `git switch myBrance`
 33. `git rebase main`
+
+
+
 34. Add <h1>About Page</h1> to about.html
 35. Save the changes CTRL + S
 36. `git add .`
@@ -215,7 +235,7 @@ rm -rf .git
 1.  `git branch`
 2.  `git branch --delete myBranch` 
       - will result in error
-3. `git branch --D myBranch` 
+3. `git branch -D myBranch` 
    - force delete
 
 ### HOW TO GET BRANCH BACK

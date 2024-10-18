@@ -1,6 +1,8 @@
 <head>
 
     <h1>Form Inputs</h1>
+    <script src="utility-functions.js"></script>
+    <script src="forms.js"></script>
 </head>
 
 <body>
@@ -75,8 +77,10 @@
         <input type="email" placeholder="Enter Email">
         <input type="submit">
     </form>
-    <form>
-        <input required type="password" placeholder="Enter Your Password">
+    <form onsubmit="myProcessForm(event)">
+        <input required name="myPasswordInput" type="password" placeholder="Enter Your Password">
+        <input name="firstNameInput">
+        <input name="lastNameInput">
         <button type="submit">Submit</button>
     </form>
     <form>
@@ -87,6 +91,8 @@
         <input type="tel" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
         <input type="submit">
     </form>
+
+    <div id="outputTag"></div>
 
 
 </body>
