@@ -25,3 +25,4 @@
 ### PREFORMATTING TEXT
 
 - `<pre>` renders all spaces and line breaks
+- Stands for preformatted text
