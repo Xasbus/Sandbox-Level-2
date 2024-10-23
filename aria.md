@@ -62,13 +62,15 @@
 9. `<output>`
     - Use `<output>` for the result of a calculation or showing feedback.
       - Example: The form has been successfully submitted.
+10. `<label>` Can be used to help label `<input>` types.
+       - semantic attributes are inclube `for` and `id`
 
 ### Semantic Attributes
 
 1. Attributes that begin with `aria`
    - `aria-current`
    - `aria-disabled`
-   - `area-label`
+   - `aria-label`
 2. `type`
    - `type="password"`
    - `type="tel"`
