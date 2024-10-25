@@ -15,7 +15,7 @@
 }
 
 .dragon {
-    background-image: url(dragon-png.jpg);
+    background-image: url("dragon-png.jpg");
 }
 
 .width100 {
@@ -24,4 +24,32 @@
 
 .gradient {
     background-image: linear-gradient(to bottom right, yellow, blue, red);
+}
+
+.i-orange,
+.b-orange {
+    color: orange;
+}
+
+i b {
+    color: pink
+}
+
+b {
+    color: gold
+}
+
+article {
+    color: moccasin;
+    font-weight: bold;
+}
+
+.black-bold {
+    color: black;
+    font-weight: bold;
+}
+
+#red-italic {
+    color: red;
+    font-style: italic;
 }

@@ -12,15 +12,18 @@
     <main class="gradient">
       <h1 class="green">CSS TITLE</h1>
       <pre>
+        
         Display=block changes the elements into each block
       </pre>
       <a class="block">a tag1</a>
       <a class="block">a tag2</a>
       <a class="block">a tag3</a>
       <pre>
+
             Display inline
             p tags are now inline
       </pre>
+
       <p class="inline">p tag 1</p>
       <p class="inline">p tag 2</p>
       <p class="inline">p tag 3</p>
@@ -29,6 +32,7 @@
         display="none" makes the element invisible, but is still inside the code
       </pre>
       <pre>
+
         How to add background image.
         background-image: url(dragon-png.jpg);
         Add the file name or url for the image. png are best for backgrounds.
@@ -41,12 +45,128 @@
               225deg
       </pre>
       <pre>
+
         Using &lt;opacity&gt; you can set an element's transparent
         0 is invisible
         1 is fully visible
         rgb (x,x,x, 0.5)
       </pre>
+
+      <pre>
+
+        Grouping Selector
+        
+        i, b {
+          color: orange;
+        }
+        EXAMPLE:
+        Seperate elements, classes, or IDs with commas.
+        The grouping selector applies the style to all of those elements.
+        <i class="i-orange">Italic Tag</i>
+        <b class="b-orange">Bold Tag</b>
+      </pre>
+
+      <pre>
+
+        Nesting selector
+
+        Selects the nested elements only.
+        &lt;b&gt; is nested inside the &lt;i&gt;
+        EXAMPLE:
+        i b {
+          color: pink;
+        }
+        <i>Italic
+          <b>This Bold Tag is nested inside the &lt;i&gt;</b>
+          Italic </i>
+        <b>This Bold Tag is not in the &lt;i&gt;</b>
+      </pre>
+      <pre>
+        Specificity 
+
+          Order of styling priority
+            1. inline
+            2. id
+            3. class
+            4. element
+          Styles with higher priority overrides lower.
+          !important is set to the highest priority and overrides them all.
+          !important also goes by loading order when dealing with more than one. Last one gets applied.
+        Examples below:    
+      </pre>
+      <article>
+        EXAMPLE ELEMENT: Hello World is on element tag and is the most general.
+        Classes are a step more specific. ID are another step more specific. And
+        inline is the most specific.
+      </article>
+      <article class="black-bold">
+        EXAMPLE CLASS: Hello World is on element tag and is the most general.
+        Classes are a step more specific. ID are another step more specific. And
+        inline is the most specific.
+      </article>
+      <article class="black-bold" id="red-italic">
+        EXAMPLE ID: Hello World is on element tag and is the most general.
+        Classes are a step more specific. ID are another step more specific. And
+        inline is the most specific.
+      </article>
+      <article class="black-bold" id="red-italic" style="color: chartreuse">
+        EXAMPLE INLINE: Hello World is on element tag and is the most general.
+        Classes are a step more specific. ID are another step more specific. And
+        inline is the most specific.
+      </article>
+      <pre>
+
+        Padding Shorthand Property
+
+          Padding with 1 value sets all sides equally
+            Eaxmple: padding: 10px
+
+          Padding with 4 values
+            1. top
+            2. right
+            3. bottom
+            4. left
+              Example: padding: 5px, 7px, 8px, 9px
+              *Padding gets applied in a clockwise direction.*
+          
+          Padding with 2 values
+            1. top & bottom
+            2.left & right
+              Example: padding 10px, 20px
+          
+          Padding with 3 values
+            1. top
+            2. left and right
+            3. bottom
+              Example: padding 10px, 5px, 15px
+      </pre>
+      <pre>
+
+        Margin Shorthand Property
+
+          Margin with 1 value sets all sides equally
+            Eaxmple: margin: 10px
+
+          Margin with 4 values
+            1. top
+            2. right
+            3. bottom
+            4. left
+              Example: margin: 5px, 7px, 8px, 9px
+              *margin gets applied in a clockwise direction.*
+          
+          Margin with 2 values
+            1. top & bottom
+            2.left & right
+              Example: margin 10px, 20px
+          
+          Margin with 3 values
+            1. top
+            2. left and right
+            3. bottom
+              Example: margin 10px, 5px, 15px
+      </pre>
     </main>
-    <footer>Website is created by David Billiot</footer>
+    <footer></footer>
   </body>
 </html>
