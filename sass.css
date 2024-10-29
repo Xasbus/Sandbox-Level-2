@@ -1,0 +1,15 @@
+h1 {
+  color: rgb(0, 0, 255);
+}
+
+p b {
+  color: rgb(255, 0, 0);
+}
+
+h3 code {
+  color: orange;
+}
+
+h3 i {
+  color: purple;
+}

@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>Noted On CSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -9,52 +15,107 @@
     <header>
       <nav></nav>
     </header>
-    <main class="gradient">
-      <h1 class="green">CSS TITLE</h1>
-      <pre>
+    <main>
+      <div class="gradient">
+        <h1 class="green text-center">CSS TITLE</h1>
+        <pre>
         
         Display=block changes the elements into each block
-      </pre>
-      <a class="block">a tag1</a>
-      <a class="block">a tag2</a>
-      <a class="block">a tag3</a>
-      <pre>
+      </pre
+        >
+        <a class="block">a tag1</a>
+        <a class="block">a tag2</a>
+        <a class="block">a tag3</a>
+        <pre>
 
             Display inline
             p tags are now inline
-      </pre>
+      </pre
+        >
 
-      <p class="inline">p tag 1</p>
-      <p class="inline">p tag 2</p>
-      <p class="inline">p tag 3</p>
-      <img src="2d-shapes.jpg" class="none" />
-      <pre>
+        <p class="inline">p tag 1</p>
+        <p class="inline">p tag 2</p>
+        <p class="inline">p tag 3</p>
+        <img src="2d-shapes.jpg" class="none" />
+        <pre>
         display="none" makes the element invisible, but is still inside the code
+      </pre
+        >
+        <h5 class="text-center">Background Image</h5>
+        <pre>
+
+          How to add background image.
+            - background-image: url(dragon-png.jpg);
+            - Add the file name or url for the image. png are best for backgrounds.
+            - background-image: linear-gradient (yellow, blue, red)
+            - Add to right, to left, to bottom right, to bottom left  ~Changes direction of colors~
+            - Changing direction can use degrees too
+                90deg
+                125deg
+                270deg
+                225deg
+                
+          Resizing the background-image
+            - create a class using, id
+            - .mySize {
+              background-size: 20%;
+            }
+
+          Repeating a background
+            1. no repeat
+            2. repeat
+              - by default it repeats
+              - use background-repeat: no repeat;
+              [ create a class called no-repeat ]
+               * Example: .no-repeat {
+                  background-repeat: no repeat;
+                  }
+              - use background-repeat: space;
+              [ repeats the background but doesn't allow it to be cut off ]
+              - first value is horizontal (x axis)
+              - second value is vertical (y axis)
+              - values are seperated but space only
+                * Example: background-repeat: space no repeat
+                *                           (x-axis)  (y-axis)
+          Background position
+            1. center
+            2. top
+            3. bottom
+            4. right
+            5. left
+              * Example: background-position: center;
+            6. off-center
+              - uses two values using (x axis) and (y axis) indivually
+              - 1st value is (x)
+              - 2nd value is (y)
+              * Example: background-posistion: 20% 30%;
+        </pre>
+      </div>
+      <h4>Gradient Color Stops</h4>
+      <pre class="gradient-stops">
+        
+        Displaying gradient stops
+
       </pre>
+      <h4 class="text-center">Opacity</h4>
       <pre>
 
-        How to add background image.
-        background-image: url(dragon-png.jpg);
-        Add the file name or url for the image. png are best for backgrounds.
-        background-image: linear-gradient (yellow, blue, red)
-        Add to right, to left, to bottom right, to bottom left  ~Changes direction of colors~
-        Changing direction can use degrees too
-              90deg
-              125deg
-              270deg
-              225deg
+          Using &lt;opacity&gt; you can set an element's transparent
+            - 0 is invisible
+            - 1 is fully visible
+            - rgb (x,x,x, 0.5)
+        
+          display: none vs opacity:0
+            * display: none
+              - makes the element invisible
+              - removes the element from the browser window
+            * opacity:0
+              - makes the element invisible
+              - element still takes up space in the browser
       </pre>
+      <h4 class="text-center">Grouping Selector</h4>
       <pre>
 
-        Using &lt;opacity&gt; you can set an element's transparent
-        0 is invisible
-        1 is fully visible
-        rgb (x,x,x, 0.5)
-      </pre>
-
-      <pre>
-
-        Grouping Selector
         
         i, b {
           color: orange;
@@ -65,10 +126,9 @@
         <i class="i-orange">Italic Tag</i>
         <b class="b-orange">Bold Tag</b>
       </pre>
-
+      <h4 class="text-center">Nesting selector</h4>
       <pre>
 
-        Nesting selector
 
         Selects the nested elements only.
         &lt;b&gt; is nested inside the &lt;i&gt;
@@ -81,8 +141,8 @@
           Italic </i>
         <b>This Bold Tag is not in the &lt;i&gt;</b>
       </pre>
+      <h4 class="text-center">Specificity</h4>
       <pre>
-        Specificity 
 
           Order of styling priority
             1. inline
@@ -114,9 +174,9 @@
         Classes are a step more specific. ID are another step more specific. And
         inline is the most specific.
       </article>
+      <h4 class="text-center">Padding Shorthand Property</h4>
       <pre>
 
-        Padding Shorthand Property
 
           Padding with 1 value sets all sides equally
             Eaxmple: padding: 10px
@@ -140,9 +200,9 @@
             3. bottom
               Example: padding 10px, 5px, 15px
       </pre>
+      <h4 class="text-center">Margin Shorthand Property</h4>
       <pre>
 
-        Margin Shorthand Property
 
           Margin with 1 value sets all sides equally
             Eaxmple: margin: 10px
@@ -166,6 +226,45 @@
             3. bottom
               Example: margin 10px, 5px, 15px
       </pre>
+      <h4 class="text-center">Box Shadow</h4>
+      <pre>
+        <span class="bg-info m-5 boxShadow">Hello World!</span><br>
+        Box Shadow
+          box-shadow: 5px 5px red;
+          1. x offset
+          2. y offset
+          3. color
+      </pre>
+
+      <h4 class="text-center">Text Shadow</h4>
+      <pre>
+        <span class="m-5 textShadow fw-bold">Hello World!</span><br>
+        Text Shadow
+          text-shadow: 1px 1px grey;
+          1. x offset
+          2. y offset
+          3. color
+      </pre>
+      <h4>Transformation</h4>
+      <pre>
+        Transformations
+          1. translate(10px, -10px)
+          2. rotate(20deg)
+          3. scale(2)
+          4. apply multiple transformations seperated by spaces
+      </pre>
+      <button class="rotate btn btn-primary m-5">1. Click</button>
+      <button class="translate btn btn-primary m-5">2. Click</button>
+      <button class="scale btn btn-primary m-5">3. Click</button>
+      <button class="multiTransform btn btn-primary m-5">4. Multiple</button>
+      <h4>Transitions or Animations</h4>
+      <pre>
+        Transitions
+          1. first value is the form to animate
+          2. second value is the duration of the animation
+             * To prevent snapback* *Set animation to its original state. *
+      </pre>
+      <button class="animation btn btn-primary m-5">Click</button>
     </main>
     <footer></footer>
   </body>

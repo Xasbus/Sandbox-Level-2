@@ -10,12 +10,9 @@
     display: none;
 }
 
-.green {
-    color: green;
-}
-
 .dragon {
     background-image: url("dragon-png.jpg");
+    background-repeat: no-repeat;
 }
 
 .width100 {
@@ -23,7 +20,11 @@
 }
 
 .gradient {
-    background-image: linear-gradient(to bottom right, yellow, blue, red);
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 0, 0.7), rgb(0, 0, 255, 0.7), rgb(255, 0, 0, 0.7));
+}
+
+.gradient-stops {
+    background-image: linear-gradient(90deg, yellow 10%, red 90%);
 }
 
 .i-orange,
@@ -52,4 +53,70 @@ article {
 #red-italic {
     color: red;
     font-style: italic;
+}
+
+.border-dashed {
+    border-style: dashed !important;
+}
+
+.border-dotted {
+    border-style: dotted !important;
+}
+
+.border-double {
+    border-style: double !important;
+}
+
+.border-groove {
+    border-style: groove !important;
+}
+
+.border-ridge {
+    border-style: ridge !important;
+}
+
+.border-inset {
+    border-style: inset !important;
+}
+
+.border-outset {
+    border-style: outset !important;
+}
+
+h4 {
+    color: orangered !important;
+}
+
+.boxShadow:hover {
+    box-shadow: 5px 5px rgb(255, 0, 0);
+}
+
+.textShadow {
+    text-shadow: 2px 2px rgb(75, 75, 75);
+}
+
+.rotate:hover {
+    transform: rotate(20deg);
+}
+
+.translate:hover {
+    transform: translate(10px, -10px);
+}
+
+.scale:hover {
+    transform: scale(2);
+}
+
+.multiTransform:hover {
+    transform: scale(2) rotate(20deg);
+}
+
+.animation:hover {
+    transform: scale(2) rotate(20deg);
+    transition: transform 2s;
+}
+
+.animation {
+    transform: scale(1) rotate(0deg);
+    transition: transform 1s;
 }
