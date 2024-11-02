@@ -1,14 +1,35 @@
+$brightOrange: rgba(236, 163, 62, 1);
+$offBlue: rgba(64, 115, 254, 1);
+$brightRed: rgba(255, 0, 0, 1);
+$primaryFont: "Bleeding Cowboys";
+$secondaryFont: cursive;
+@font-face {
+    font-family: "Bleeding Cowboys";
+    src: url("Bleeding_Cowboys.ttf");
+}
+
+main {
+    font-family: $secondaryFont;
+}
+
 h1 {
-    color: rgb(0, 0, 255);
+    color: $offBlue;
+    &:hover {
+        color: $brightRed;
+        width: fit-content;
+    }
+    & {
+        font-family: "Bleeding Cowboys";
+    }
 }
 
 p b {
-    color: rgb(255, 0, 0);
+    color: $brightRed;
 }
 
 h3 {
     code {
-        color: orange;
+        color: $brightOrange;
     }
 }
 
@@ -16,5 +37,17 @@ $myColor: purple;
 h3 {
     i {
         color: $myColor;
+    }
+}
+
+$dragonPic: url(dragon-png.jpg);
+$horizontalRepeat: space no-repeat;
+.horizontalRepeat {
+    background-repeat: $horizontalRepeat;
+}
+
+pre {
+    code {
+        color: $offBlue
     }
 }

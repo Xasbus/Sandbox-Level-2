@@ -21,17 +21,108 @@
       </pre>
       <h3>SASS <i>variable</i> syntax</h3>
       <pre>
+        <code>
         • $myColor: purple;
             h3 {
                 i {
                   color: $myColor;
                 }
-            }
+            }</code>
         • SASS variables starts with $
         • Use colon to store a value
         • Use the value with the variable name
       </pre>
+      <h3>How to use SASS variables to remember a file name</h3>
+      <pre>
+        <code>$dragonPic: url(dragon-png.jpg);</code>
+      </pre>
+      <h3>SASS variable to remember horizontal repeat</h3>
+      <pre>
+        <code>
+        $horizontalRepeat: space no-repeat;
+          .horizontalRepeat {
+          background-repeat: $horizontalRepeat;
+          }</code>
+      </pre>
+      <div class="horizontalRepeat"></div>
+      <h3>SASS variable for veritcal repeat</h3>
+      <pre>
+        <code>
+        $verticalRepeat: no-repeat repeat;
+          .verticalRepeat {
+          background-repeat: $verticalRepeat;
+        }</code>
+      </pre>
+      <h3>SASS variable for stretching backgrounds</h3>
+      <pre>
+        <code>
+        $stretch: 25% 100%;
+        .stretch {
+          background-size: $stretch;
+        }</code>
+      </pre>
+      <h3>SASS variable for using gradient stops</h3>
+      <pre>
+        <code>
+        $darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
+        $lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
+        .gradient {
+          background-Image: $lightGradient;
+          }</code>
+      </pre>
+      <h3>Block Elements</h3>
+      <pre>
+        1. <code>width: fit-content;</code>
+            *Useful on block Elements
+            *Block elements still use the whole line
+            *Reduces the hit box of the element
+      </pre>
+      <h3>Parent Syntax</h3>
+      <pre>
+        <code>
+        h1 {
+          color: $offBlue;
+          &:hover {
+              color: $brightRed;
+              width: fit-content;
+            }
+        }</code>
+
+      *parent syntax groups styles together under the parent selector <code>&</code>
+      </pre>
+      <h3>SASS variables for fonts</h3>
+      <pre>
+        • Set primary font
+        • Set secondary font
+        • Single source of truth
+
+        * Font Varaibles *
+
+        <code>
+        $primaryFont: cursive;
+        $secondaryFont: fantasy;
+        main {
+          font-family: $primaryFont;
+        }</code>
+
+        Use variables to store fonts
+        use single source of true
+      </pre>
+      <h3>Adding Fonts</h3>
+      <pre>
+        1. Download the font - used dafont.com
+        2. If the font is .zip - move the font to root folder
+        3. Use <code>@font-face</code> to add the font
+        4. Use <code>font-family</code> to name the font
+        5. Use <code>src to link</code> the font file
+        6. Use the font.
+        
+          <code>@font-face {
+            font-family: "Bleeding Cowboys";
+            src: url("Bleeding_Cowboys.ttf");
+        }</code>
+      </pre>
     </main>
-    <footer></footer>
+    <footer>Footer is Here</footer>
   </body>
 </html>

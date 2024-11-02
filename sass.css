@@ -1,5 +1,21 @@
+@font-face {
+  font-family: "Bleeding Cowboys";
+  src: url("Bleeding_Cowboys.ttf");
+}
+main {
+  font-family: cursive;
+}
+
 h1 {
-  color: rgb(0, 0, 255);
+  color: rgb(64, 115, 254);
+}
+h1:hover {
+  color: rgb(255, 0, 0);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+h1 {
+  font-family: "Bleeding Cowboys";
 }
 
 p b {
@@ -7,9 +23,17 @@ p b {
 }
 
 h3 code {
-  color: orange;
+  color: rgb(236, 163, 62);
 }
 
 h3 i {
   color: purple;
+}
+
+.horizontalRepeat {
+  background-repeat: space no-repeat;
+}
+
+pre code {
+  color: rgb(64, 115, 254);
 }
