@@ -8,6 +8,58 @@ $secondaryFont: cursive;
     src: url("Bleeding_Cowboys.ttf");
 }
 
+@mixin redText {
+    color: red;
+}
+
+@mixin boxShadow {
+    box-shadow: 5px 5px grey;
+}
+
+@mixin textShadow {
+    text-shadow: 2px 2px yellow;
+}
+
+@mixin animation1 {
+    transform: scale(1) rotate(0deg);
+    transition: transform 2s;
+}
+
+@mixin animation2 {
+    transform: scale(2) rotate(15deg);
+    transition: transform 2s;
+}
+
+@mixin one-for-all {
+    transform: scale(1) rotate(0deg);
+    transition: transform 2s;
+    &:hover {
+        transform: scale(.5) rotate(-15deg);
+        transition: transform 2s;
+    }
+}
+
+#mixin-button {
+    @include animation1();
+    &:hover {
+        @include animation2
+    }
+}
+
+#mixin-example {
+    @include boxShadow();
+    @include textShadow();
+}
+
+#one-for-all {
+    @include one-for-all();
+}
+
+p {
+    @include redText();
+    @include one-for-all();
+}
+
 main {
     font-family: $secondaryFont;
 }

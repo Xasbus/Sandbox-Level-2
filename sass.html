@@ -2,10 +2,16 @@
 <html lang="en">
   <head>
     <title>SASS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link href="sass.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body class="container">
     <header>
       <nav></nav>
     </header>
@@ -122,7 +128,45 @@
             src: url("Bleeding_Cowboys.ttf");
         }</code>
       </pre>
+      <h3>Single Line Mixin</h3>
+      <pre>
+        <code>
+        @mixin redText {
+          color: red;
+        }</code>
+
+        - Mixin are like variables
+        - Single line mixins store a property and value
+        - Type <code>@mixin</code> to define/declare a mixin variable
+        - Type <code>@include</code> to use the mixin
+        - Mixins can substitute for utility class so elements can be described by their names
+        - 
+      </pre>
+      <p class="one-for-all">This is the paragraph</p>
+      <span class="bg-primary p-2" id="mixin-example">Hello World!</span
+      ><br /><br />
+      <h3>Multi-Line Mixin</h3>
+      <pre>
+        <code>
+          @mixin animation1 {
+            transform: scale(1) rotate(0deg);
+            transition: transform 2s;
+        }
+
+        #mixin-button {
+          @include animation1();
+        }
+        </code>
+        - Multi line mixins store a property and value
+        - Type <code>@mixin</code> to define/declare a mixin variable
+        - Type <code>@include</code> to use the mixin
+        - Mixins can substitute for utility class so elements can be described by their names
+        - 
+      </pre>
+      <button class="btn btn-success" id="mixin-button">Click</button>
+      <h3>SASS Mixin All in One</h3>
+      <button class="btn btn-danger" id="one-for-all">Hover Over Me</button>
     </main>
-    <footer>Footer is Here</footer>
+    <footer class="p-3">Footer is Here</footer>
   </body>
 </html>

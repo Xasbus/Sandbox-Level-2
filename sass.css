@@ -2,6 +2,39 @@
   font-family: "Bleeding Cowboys";
   src: url("Bleeding_Cowboys.ttf");
 }
+#mixin-button {
+  transform: scale(1) rotate(0deg);
+  transition: transform 2s;
+}
+#mixin-button:hover {
+  transform: scale(2) rotate(15deg);
+  transition: transform 2s;
+}
+
+#mixin-example {
+  box-shadow: 5px 5px grey;
+  text-shadow: 2px 2px yellow;
+}
+
+#one-for-all {
+  transform: scale(1) rotate(0deg);
+  transition: transform 2s;
+}
+#one-for-all:hover {
+  transform: scale(0.5) rotate(-15deg);
+  transition: transform 2s;
+}
+
+p {
+  color: red;
+  transform: scale(1) rotate(0deg);
+  transition: transform 2s;
+}
+p:hover {
+  transform: scale(0.5) rotate(-15deg);
+  transition: transform 2s;
+}
+
 main {
   font-family: cursive;
 }
