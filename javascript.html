@@ -16,7 +16,7 @@
     <header>
       <nav></nav>
     </header>
-    <main>
+    <main class="container">
       <h1>Javascript</h1>
       <hr />
 
@@ -26,7 +26,14 @@
             display("Welcome To The Page!");
             }
       </code>
+      • A function that doesn't have parameters.
+      • Its only purpose is to call a function with parameters.
+      
+      • Test results:
+        - a value can be sent to functions without parameters.
+        - Add a parameter to the function to access the value.
       <button onclick="greeting('Welcome to the page.')">Click to Activator!</button>
+      <button onclick="activatorTest('Hello world!')">Activator Test</button>
       </pre>
       <h2>Callback Functions</h2>
       <pre>
@@ -36,7 +43,7 @@
           function activator() {
             myFunction(greeting);
             }
-         activator();
+          activator();
           </code>
           
         Is a function that is passed as a parameter.
@@ -69,11 +76,203 @@
         </pre>
       <h2>Server Simulation</h2>
       <pre>
+          A server takes time to respond.
+          Use <code>asynchronous();</code> code to simulated it.
+          <code>
+            function submitForm(event) {
+              const inputs = event.target;
+              emailInput = inputs[0];
+              const email = emailInput.value;
+              display("Submitting form for the email " + email + "... ");
+              setTimeout(serverResponse, 5000);
+            }
+          
+          function serverResponse() {
+              display("Server was connected successfully.");
+          }
+          </code>
+        </pre>
+      <form onsubmit="submitForm(event)">
+        <label for="email">Email: </label><br />
+        <input type="email" id="email" name="email" required /><br />
+        <input type="submit" />
+      </form>
+
+      <h2>JSON Stringify</h2>
+      <pre>
+          <code>
+            function displayObject() {
+              const myCar = {
+                  color: "red",
+                  year: 2024,
+              };
+              const result = JSON.stringify(myCar);
+              display(result);
+            }
+          </code>
+          • JSON stands for JavaScript Object Notations
+          • The syntax we use to represents objects
+          • Curly braces represent an object
+          • Properties are separated by a comma
+          • Properties are in quotes
+          • Values are set with a colon
+          • Converts a string from an object.
+          • Store the result into a variable such as "result".
+        </pre>
+      <button onclick="displayObject()">Display Object</button>
+      <h2>JavaScript Keyword: class</h2>
+      <pre>
+          • A JavaScript class is like a template.
+          • It predefines an object without creating it.
+          • Usually created at the top of the JavaScript file.
+          • Class syntax
+              1. Keyword class
+              2. Class name
+                - Usually in Pascal Case.
+              3. Curly braces
+              4. Assign properties their values
+                  - Use equal signs and semi-colons
+          <code>
+            class MyCar {
+              color = "Red";
+              year = 2024;
+          }
+          </code>
+        </pre>
+      <pre>
+          -------------
+          Pascal Case *Important Note*
+          Each work starts with capitalized case. MyCar
+          -------------
+          Class Vs. Object
+          • Directly displaying a class shows its code.
+          • In developer tools, a class has a name and length.
+          • The JavaScript class is different from a JavaScript object.
+          • The syntax of a class is different than an object.
+          -------------
+        </pre
+      >
+      <button onclick="classVsObject()">Class Vs. Object</button>
+      <h2>JavaScript Keyword: new</h2>
+      <pre>
+          • Constructs an object from a class.
+          <code>const myCar = new MyCar();</code>
+          • The objects have the properties and values defined by the class.
+          • The objects are independent.
+          • The values of the properties can be changed indiviually.
+          • Syntax
+            1. Keyword <code>new</code>
+            2. Name of the class with parentheses after it.
+            3. Store the value
+              - the value is an object created from the class
+              
+            <button onclick="newObject()">New Keyword</button>
+        </pre>
+      <h2>Function in a function</h2>
+      <pre>
+            
+            • Functions can be defined in other functions.
+            • The inner function has access to variables in the outer function.
+            • Functions can be defined to other functions.
+            • Inner Function has access to Outer Function.
+            • Need to run the inner function.
+            • Inner function only runs when its activatived.
+            <code>
+              function outerFunction() {
+                const message = "Hello world!";
+              
+                function innerFunction() {
+                  display(message);
+                }
+              }
+              
+            </code>
+            
+          </pre>
+      <button onclick="outerFunction()">Nested Function</button>
+      <h2>Promise</h2>
+      <pre>
+          • A special class that runs a callback function.
+          • The object indicates the status of the callback function.
+          • Observations :
+            - It's not asynchronous. It immediately runs my Function
+            - Status shows pending even after myFunction has finished.
+          • The status must be manually changed.
+          • The callback function must indicate when it has finished.
+          • The Promise sends a callback function (<code>resolve();</code>) to the promised function (<code>myFunctionPromised</code>).
+          • The promised function (<code>myFunctionPromised</code>) of the callback function (<code>resolve();</code>) indicates that the Promise is fullfilled.
+          • That callback function is known as the resolve function.
+          • A Promise is meant to be used by asynchronous code.
+          • The asynchronous code is supposed resolve to indicate when it's done.
+          • 
+          <code>
+            function myFunctionPromised(resolve) {
+            display("Inside my myFunctionPomised. ");
+            myParameter();
+            }
+        
+            function makePromise() {
+                const promise = new Promise(myFunctionPromised);
+                promise.then(getMessage);
+                display("Promises made, promises kept");
+            }
+        
+            function activatorTest(resolve) {
+                display(resolve);
+            }
+      </code>
+          <button onclick="makePromise()">Make Promise</button>
+          <button onclick="activatorTest('Hello world!')">Activator Test</button>
+        </pre>
+      <h2>Promise Function</h2>
+      <pre>
+          Use an inner function to give access to the resolve function.
+          <code>
+            function outerFunction() {
+              const message = "Message from the outer function. ";
+              innerFunction();
+            
+              function innerFunction() {
+                display(message);
+              }
+            }
+          </code>
+        </pre>
+      <h2>Promise.then function</h2>
+      <pre>
+          • The promise supposedly gets fulfilled
+          • A promise value is accessible
+          • The .then function runs the callback function when the promise is fulfulled.
+          • The callback function has access to the resolve value
+          <code>
+            promise.then(getMessage);
+
+            function getMessage(resolveVaule) {
+              display(resolveVaule);
+            }
+          </code>
+          Resolve value
+          -------------
+          • The resolve value gets passed to the callback of the .then function
+          <code>
+            resolve("The server has responded and promise is fulfilled. ");
+          </code>
+        </pre>
+
+      <h2>Server Similation with Promise</h2>
+      <pre>
+          
           <code>
 
           </code>
         </pre>
+      <form onsubmit="handleSubmit(event)">
+        <label for="email">Email: </label><br />
+        <input type="email" id="email" name="email" required /><br />
+        <input type="submit" />
+      </form>
     </main>
-    <footer>Website is created by David Billiot</footer>
+    <hr />
+    <footer class="p-3">NOTES FOR JAVASCRIPT</footer>
   </body>
 </html>
