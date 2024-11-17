@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>API NOTES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="javascript.css" />
+    <script src="utility-functions.js"></script>
+    <script src="api.js"></script>
+</head>
+
+<body>
+    <header></header>
+    <main class="container">
+        <h2>Rest API</h2>
+        <pre>
+----------------
+<img src="api-illustration.jpg">
+
+REST: Representational State Transfer
+API: Application Programming Interface
+
+A set of rules for communicating with a server.
+The URL to connect with the server must be properly formed.
+
+1. Client: Makes a request according to the REST API rules (menu).
+2. REST API: Sends the request in a way the server understands.
+3. Server: Processes the request.
+4. REST API: Delivers the response (stringified object).
+      </pre>
+        <h2>REST API analogy</h2>
+        <pre>
+-----------------------------
+<img src="api-analogy.jpg">
+
+1. Customer: Requests a meal from the menu.
+2. Waiter: Writes the request in a way the chef understands.
+3. Chef: Processes the request by cooking the meal.
+4. Waiter: Responds by delivering the meal.
+        </pre>
+        <h2>Trivia API</h2>
+        <pre>
+----------------
+1. 
+2. Use the text method
+3. 
+        </pre
+      >
+      <button onclick="handleClick(event)">Trivia</button>
+
+      <h2>Fetch function</h2>
+      <pre>
+-------------------------
+<code>
+const promise = fetch("https://opentdb.com/api.php?amount=1");
+</code>
+• Sends a request to the URL of the REST API
+• Returns a promise
+• Its resolve value is not a stringified object.
+• The resolve value is a special object created by the fetch function.
+• There is an extra step to access the response from the REST API.
+
+        </pre>
+
+        <h2>The text method</h2>
+        <pre>
+---------------------------
+
+• Retrieves the stringified object from the fetch object
+• Returns a promise
+</pre
+      >
+      <h2>Extracting the Data</h2>
+      <pre>
+-------------------------------
+
+      </pre>
+        <h2>Displaying the Data</h2>
+        <pre>------------------------------------------
+
+    1. Create sample HTML of a trivia question and it's answers
+    2. Converted it to a template string
+    3. Replaced with variables
+    4. Output to an HTML element
+  <code>
+    function viewResponse(resolveValue) {
+      debugger;
+      const response = JSON.parse(resolveValue);
+      const results = response.results;
+      const item = results[0];
+      const question = item.question;
+      const correctAnswer = item.correct_answer;
+      const incorrects = item.incorrect_answers;
+  </code>
+</pre>
+        <h2>Specifying the Data</h2>
+        <pre>------------------------------------------
+  1. Specify the amount to get multiple questions.
+  2. You can select a catagory.
+  <code>
+    https://opentdb.com/api.php?amount=3&category=15&type=multiple
+  </code>
+</pre>
+        <h2>Postman App</h2>
+        <pre>
+----------------
+  Application for trying and testing APIs
+</pre
+      >
+      <h2>Key Value Pairs</h2>
+      <pre>
+---------------------------
+• They specify the data we want to request
+• Key is on left, value is on the right
+• Connected with = and separated by &
+• Starts with ?
+  1. Insert key value pairs
+  2. Send a request
+      </pre>
+        <h2>REST API Endpoint</h2>
+        <pre>
+-------------------------
+A path that is appended to the base URL.
+Contains data about a specific category.
+Question of the Day.
+<code>/qotd</code>
+      </pre>
+        <h2>REST API key</h2>
+        <pre>
+--------------
+A unique string (or code) that grants access to a REST API
+To use some REST APIs, an API key is required
+      </pre>
+        <h2>CORS</h2>
+        <pre>
+-----------
+
+• <u>C</u>ross <u>O</u>rigin <u>R</u>esource <u>S</u>haring
+• Origin: The web address of the client and server
+• Cross Origin: Different origins
+• Resource: Data such as files and stringified objects
+• Resource Sharing: Transmitting the resource
+----------------------------------------------
+<img src="CORS1_pic.jpeg" width="60%">
+• The origin's policy for sharing resources
+• Servers are supposed to tell browsers their CORS policy
+• A list of origins that are allowed to access the server
+• Browsers block the response if the origin is not on the list
+--------------
+• Some servers do not specify their CORS policy
+• Browsers automatically block responses from different origins
+• The quotes API doesn't specify a CORS policy
+• Browsers automatically block responses from the quotes API
+------------------------------------------
+<img src="CORS_2_pic.jpeg" width="60%">
+
+      </pre>
+        <h2>CORS Proxy Server</h2>
+        <pre>----------------------------------
+<img src="CORS4.jpeg" width="60%">
+1. Accepts the request from the client
+2. Forwards the request to the API
+3. Receives the response from the API
+4. Manipulates the response so the browser doesn't block it
+      </pre>
+    </main>
+    <footer class="p-3">REST API NOTES</footer>
+</body>
+
+</html>
